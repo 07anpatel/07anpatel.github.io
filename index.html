@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anika Patel | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #F7F3EB;
+      --burgundy: #722F37;
+      --rose: #E8D9D3;
+      --espresso: #332724;
+      --taupe: #A99B8C;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--espresso);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 8%;
+      border-bottom: 1px solid #e5dcd0;
+    }
+
+    .logo {
+      color: var(--burgundy);
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      font-size: 13px;
+    }
+
+    .nav-links a:hover {
+      color: var(--burgundy);
+    }
+
+    .hero {
+      max-width: 1000px;
+      margin: auto;
+      padding: 110px 30px 100px;
+    }
+
+    .eyebrow {
+      color: var(--burgundy);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 86px);
+      line-height: 1.12;
+      letter-spacing: -2px;
+      margin: 22px 0;
+    }
+
+    h1 span {
+      color: var(--burgundy);
+      font-style: italic;
+    }
+
+    .intro {
+      max-width: 570px;
+      font-size: 17px;
+      color: #71655e;
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 14px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 20px;
+      border: 1px solid var(--burgundy);
+      border-radius: 3px;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+
+    .button.primary {
+      color: white;
+      background: var(--burgundy);
+    }
+
+    .button:hover {
+      opacity: 0.8;
+      transform: translateY(-2px);
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 65px 30px;
+      scroll-margin-top: 25px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .section-number {
+      color: var(--burgundy);
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      font-size: 38px;
+    }
+
+    .section-description {
+      color: #71655e;
+      max-width: 560px;
+      margin-top: -15px;
+      margin-bottom: 28px;
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #FCFAF6;
+      border: 1px solid #e6ddd1;
+      padding: 27px;
+      border-radius: 5px;
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      border-color: var(--burgundy);
+      transform: translateY(-3px);
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin-bottom: 9px;
+    }
+
+    .card p {
+      color: #71655e;
+      font-size: 14px;
+    }
+
+    .tag {
+      display: inline-block;
+      color: var(--burgundy);
+      background: var(--rose);
+      padding: 4px 9px;
+      margin: 14px 5px 0 0;
+      font-size: 11px;
+      border-radius: 3px;
+    }
+
+    .text-link {
+      display: inline-block;
+      color: var(--burgundy);
+      font-size: 13px;
+      margin-top: 18px;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .dance-card {
+      background: #EFE5DD;
+    }
+
+    .photo-note {
+      background: #E9E2D6;
+      padding: 30px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .photo-note p {
+      color: #71655e;
+      font-size: 14px;
+    }
+
+    .contact {
+      text-align: center;
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+
+    .contact h2 {
+      margin: 15px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid #e5dcd0;
+      color: #897c71;
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        padding: 20px 5%;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 75px 25px;
+      }
+
+      .section {
+        padding: 45px 25px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="#" class="logo">Anika Patel.</a>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#dance">Dance</a>
+      <a href="#photography">Photography</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <p class="eyebrow">Computer Science · Creativity · Culture</p>
+    <h1>A little bit of<br><span>everything.</span></h1>
+    <p class="intro">
+      Hi, I'm Anika! I'm a Computer Science student at the
+      University of Michigan who loves building things with code,
+      expressing myself through dance, and capturing moments
+      through photography.
+    </p>
+    <div class="hero-links">
+      <a href="#projects" class="button primary">Explore my work ↗</a>
+      <a href="#dance" class="button">A little about me ↓</a>
+    </div>
+  </header>
+
+  <section class="section" id="projects">
+    <div class="section-heading">
+      <span class="section-number">01 /</span>
+      <h2>Projects</h2>
+    </div>
+    <p class="section-description">
+      Things I've built, problems I've explored, and ideas
+      I've brought to life through technology.
+    </p>
+
+    <div class="grid">
+      <article class="card">
+        <h3>Machine Learning</h3>
+        <p>
+          Exploring neural networks and multi-label classification
+          to predict diagnoses from symptom data.
+        </p>
+        <span class="tag">Python</span>
+        <span class="tag">Machine Learning</span>
+        <br>
+        <a class="text-link" href="https://github.com/">Add project link ↗</a>
+      </article>
+
+      <article class="card">
+        <h3>More coming soon</h3>
+        <p>
+          I'm always learning and working on new ideas.
+          Check back as I add more projects to my portfolio.
+        </p>
+        <span class="tag">C++</span>
+        <span class="tag">Software</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="dance">
+    <div class="section-heading">
+      <span class="section-number">02 /</span>
+      <h2>Dance</h2>
+    </div>
+    <p class="section-description">
+      A creative outlet that's been part of my life since childhood.
+    </p>
+
+    <div class="grid">
+      <article class="card dance-card">
+        <h3>Kathak & Classical Dance</h3>
+        <p>
+          Years of learning Indian classical dance have taught me
+          discipline, storytelling, and the beauty of tradition.
+        </p>
+      </article>
+
+      <article class="card dance-card">
+        <h3>Bollywood & Choreography</h3>
+        <p>
+          From choreographing performances to teaching others,
+          dance is one of my favorite ways to connect with people.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="photography">
+    <div class="section-heading">
+      <span class="section-number">03 /</span>
+      <h2>Photography</h2>
+    </div>
+    <p class="section-description">
+      Little moments, new places, and the things I want to remember.
+    </p>
+
+    <div class="photo-note">
+      <h3>My point of view.</h3>
+      <p>
+        A collection of photos from travels, events, and everyday life
+        will live here soon.
+      </p>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <p class="eyebrow">LET'S CONNECT</p>
+    <h2>Thanks for stopping by.</h2>
+    <p class="section-description" style="margin: 0 auto 25px;">
+      Find me online or take a look at what I'm working on.
+    </p>
+    <a class="button primary"
+       href="https://github.com/07anpatel">
+       GitHub ↗
+    </a>
+    <a class="button" href="https://www.linkedin.com/">
+      LinkedIn ↗
+    </a>
+  </section>
+
+  <footer>
+    © 2026 Anika Patel · Made with care.
+  </footer>
+
+</body>
+</html>
