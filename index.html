@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anika Patel | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav aria-label="Main">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="interests.html">Interests</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section id="about" class="hero">
+    <div>
+      <h1>Hi, I’m Anika Patel.</h1>
+      <p class="role">Computer science student interested in AI and healthcare</p>
+      <p>I’m a Computer Science student at the University of Michigan. I’m interested in how AI and software can improve healthcare and make a difference in people’s lives. Outside of tech, I love dancing, choreographing, and capturing moments through photography.</p>
+      <div class="actions">
+        <a class="btn" href="#projects">See my projects</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="photo.jpg" alt="Portrait of Anika Patel">
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div>
+        <h3>Languages</h3>
+        <ul><li>Python</li><li>C++</li><li>HTML &amp; CSS</li></ul>
+      </div>
+      <div>
+        <h3>Tools</h3>
+        <ul><li>Git &amp; GitHub</li><li>VS Code</li><li>Linux</li></ul>
+      </div>
+      <div>
+        <h3>Beyond code</h3>
+        <ul><li>Teamwork</li><li>Communication</li><li>Design</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <article class="project">
+        <div class="shot"><img src="ml-project.png" alt="Chart from the diagnosis prediction project"></div>
+        <div class="body">
+          <h3>Diagnosis prediction from symptoms</h3>
+          <p>A neural network that predicts mental health diagnoses from symptom data using multi-label classification. Published in the Curieux Academic Journal, February 2025.</p>
+          <p class="tags">Python, machine learning</p>
+          <div class="links"><a href="https://colab.research.google.com/drive/12zcgl_Yl6BedEASzzJrs4k8hGoQnDWQX" target="_blank" rel="noopener">View notebook</a><a href="https://www.curieuxacademicjournal.com/_files/ugd/99711c_663da8cf4d39442097c3d1cb432406d2.pdf#page=109" target="_blank" rel="noopener">Read the paper</a></div>
+        </div>
+      </article>
+      <article class="project">
+        <div class="shot" style="background:#1e1e1e"><img src="euchre.png" alt="Terminal output of a Euchre game: tricks played, a hand won, and the final winners" style="object-fit:contain"></div>
+        <div class="body">
+          <h3>Euchre card game</h3>
+          <p>A playable Euchre game written in C++ for EECS 280, with computer and human players.</p>
+          <p class="tags">C++, object-oriented design</p>
+                  </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <div class="resume">
+      <p>Education, experience, and coursework in one page. Last updated October 2026.</p>
+      <a class="btn" href="resume.pdf" download>Download PDF</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <div>
+        <h2>Let’s talk</h2>
+        <p>Have an opportunity, a project idea, or just want to say hi? Send a message or email me directly.</p>
+        <a href="mailto:anikaptl@umich.edu">anikaptl@umich.edu</a>
+        <div class="social">
+          <a href="https://github.com/07anpatel">GitHub</a>
+          <a href="https://www.linkedin.com/in/anika-patel-8117b532b/">LinkedIn</a>
+        </div>
+      </div>
+      <!-- Static sites can't send mail on their own. Swap the action for your Formspree/Netlify endpoint, or this opens the visitor's email app. -->
+      <form action="mailto:anikaptl@umich.edu" method="post" enctype="text/plain">
+        <label>Name <input name="name" required></label>
+        <label>Email <input type="email" name="email" required></label>
+        <label>Message <textarea name="message" required></textarea></label>
+        <button class="btn" type="submit">Send message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Anika Patel</footer>
+</body>
+</html>
